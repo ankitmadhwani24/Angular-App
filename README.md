@@ -1,8 +1,8 @@
 # Bugtracker
 
 #User credentials
-LOGIN : causecode
-PASSWORD: causecode
+LOGIN : John_Smith@
+PASSWORD: Bugtrack@123
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
