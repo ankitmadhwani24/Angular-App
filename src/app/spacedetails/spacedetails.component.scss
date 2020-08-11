@@ -1,0 +1,137 @@
+.space-details {
+    padding: 50px 0;
+
+    span {
+        font-size: 14px;
+        &.title {
+            text-align: left;
+            width: 35%;
+            display: inline-block;
+            float: left;
+            font-weight: 100;
+        }
+        text-align: right;
+        font-weight: 600;
+    }
+    .inner-col {
+        border: 1px solid #eee;
+        padding: 20px 10px;
+    }
+    h3 {
+        font-weight: 600;
+        span {
+            font-size: 24px;
+        }
+    }
+    .edit {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    .desc {
+        margin: 20px 0;
+    }
+    .edit-box {
+        textarea {
+            width: 100%;
+            min-height: 190px;
+            // margin-bottom: 15px;
+            // border: none;
+            resize: none;
+            padding: 15px;
+            border-color: #eee;
+        }   
+        p {
+            font-size: 16px;
+            i {
+                margin-right: 6px;
+            }
+        }
+        button {
+            padding: 8px 30px;
+            font-size: 16px;
+        }
+        &.new-comment{
+            margin-top: 25px;
+
+            article {
+                label {
+                    font-size: 14px;
+                    font-weight: 100;
+                    line-height: 0;
+                }
+                select {
+                    padding: 0;
+                    height: initial;
+                }
+            }
+        }
+    }
+    .file-attachment {
+        margin-bottom: 15px;
+        border: 1px solid #eee;
+        border-top: none;
+        padding: 10px 15px;
+        position: relative;
+        top: -6px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: 767px) {
+            display: block;
+            text-align: center;
+        }
+    }
+    .media {
+        a {
+            &.user-img {
+                display: inline-block;
+                width: 30px;
+            }
+        }
+    }
+    .comment {
+        p {
+            background-color: rgba(82, 198, 193, 0.1);
+            padding: 15px;
+            font-size: 16px;
+            margin-top: 30px;
+            position: relative;
+
+            &:after {
+                position: absolute;
+                content: '';
+                width: 0; 
+                height: 0; 
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+                border-bottom: 15px solid rgba(82, 198, 193, 0.1);
+                top: -15px;
+                left: 30px;
+            }
+        }
+    }
+    .comment-section {
+        margin-top: 25px;
+        h4 {
+            font-weight: 600;
+            span {
+                font-size: 18px;
+                font-weight: 200;
+                color: #ccc;
+            }
+        }
+    }
+    .status {
+        p {
+            font-size: 12px;
+            margin-left: 40px;
+            padding-left: 6px;
+            border-left: 3px solid #ccc;
+            
+            span {
+                font-size: 12px;
+            }
+        }
+    } 
+}

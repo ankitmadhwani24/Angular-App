@@ -1,0 +1,48 @@
+.navbar {
+    min-height: initial;
+    background-color: transparentize($color: #52c6c1, $amount: .4);
+    border: none;
+    border-radius: 0;
+    .navbar-header {
+        float: none;
+        text-align: center;
+    }
+
+    .navbar-brand {
+        width: 90px;
+        display: inline-block;
+        height: 90px;
+        float: none;
+        padding-bottom: 0;
+    }
+
+    h3 {
+        font-family: 'lobster';
+        color: #fff;
+        // margin-top: 0;
+    }
+}
+
+.login-section {
+    padding-top: 30px;
+    figure {
+        width: 80px;
+        margin: auto;
+    }
+    h1 {
+        font-weight: 700;
+    }
+    form {
+        padding-top: 30px;
+    }
+    p {
+        margin-top: 10px;
+        font-weight: 200;
+    }
+}
+.register {
+    .sub-content {
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,134 @@
+<nav class="navbar navbar-default flush-bottom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <div class="brand-img col-sm-1"><img alt="Brand" src="assets/bug-fixing.png" class="img-responsive"></div>
+      <div class="col-sm-4 text-left"><h3><a routerLink="/dashboard">Bug Tracker</a></h3></div>
+      <div class="col-sm-6 text-right">
+       <ul class="nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">John_Smith <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </li>
+       </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<section class="space-details">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="row">
+          <div class="col-4 inner-col">
+            <span class="title">Created on</span>
+            <span>2017-05-21 11:18</span>
+            <hr>
+            <span class="title">Reported by</span>
+            <span>John (Tester) </span>
+            <hr>
+            <span class="title">Status</span>
+            <span>New</span>
+            <hr>
+            <span class="title">Assigned to</span>
+            <span>Mark</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <h3 class="flush-top"><span class="ticket-number">#2</span> Server testing and deployment</h3>
+        <a class="edit pull-right" (click) = "showCommentBox()"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+        <p id="bug-desc" class="desc">No description</p>
+        <div id="main-comment" class="edit-box main-comment" style="display:none;">
+          <form>
+            <textarea id="bug-desc-box" placeholder="Type bug description"></textarea>
+            <div class="file-attachment flush-top">
+              <p class="flush-bottom">
+                <i class="fa fa-paperclip" aria-hidden="true"></i>
+              Attach file or screenshots of the bug
+              </p>
+              <div class="upload-btn-wrapper">
+                <button class="btn">Upload a file</button>
+                <input type="file" name="myfile" />
+              </div>
+            
+            </div>
+            <button (click)="showBug()" class="yellow-btn submit">Save</button>
+          </form>
+        </div>
+        <hr>
+        <h4>Ticket Activities</h4>
+        <div id="bug-comments">
+          <article class="comment-section">
+            <div class="media">
+              <div class="media-left">
+                <a href="#" class="user-img">
+                  <img class="media-object img-responsive" src="assets/placeholder.jpg" alt="...">
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"><span class="by">by </span>John_Smith</h4>
+                <div class="comment">
+                  <p>Database on server not working properly</p>
+                </div>
+              </div>
+           </div>
+          </article>
+          <article class="status">
+            <p class="assign-change">Assign changed from <span class="old">John </span> to <span class="new">Mark</span></p>
+            <p class="status-change">Status changed from <span class="old">New</span> to <span class="new">Accepted</span></p>
+          </article>
+        </div>
+        <hr>
+        <h4>Add new activity</h4>
+         <div class="edit-box new-comment">
+          <form>
+            <textarea placeholder="Add comment"></textarea>
+            <div class="file-attachment flush-top">
+              <p class="flush-bottom">
+                <i class="fa fa-paperclip" aria-hidden="true"></i>
+              Attach file or screenshots of the bug
+              </p>
+              <div class="upload-btn-wrapper">
+                <button class="btn">Upload a file</button>
+                <input type="file" name="myfile" />
+              </div>
+            
+            </div>
+            <article class="row">
+              <div class="col-sm-4">
+                <button class="yellow-btn submit">Comment</button>
+              </div>
+              <div class="col-sm-3 col-sm-offset-2">
+                <label>Assign to:</label>
+                <select class="form-control">
+                  <option default>None<option>
+                  <option>John (Tester)</option>
+                  <option>Michel (Designer)</option>
+                  <option>Mark (Developer)</option>
+                </select>
+              </div>
+              <div class="col-sm-3">
+                <label>Status :</label>
+                <select class="form-control">
+                  <option default>None<option>
+                  <option>Fixed</option>
+                  <option>Test</option>
+                  <option>Test Failed</option>
+                  <option>Invalid</option>
+                  <option>Closed</option>
+                </select>
+              </div>
+            </article>
+            
+            
+            
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

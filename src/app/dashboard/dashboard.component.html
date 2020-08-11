@@ -1,0 +1,96 @@
+<nav class="navbar navbar-default flush-bottom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <div class="brand-img col-sm-1"><img alt="Brand" src="assets/bug-fixing.png" class="img-responsive"></div>
+      <div class="col-sm-4 text-left"><h3><a routerLink="/dashboard">Bug Tracker</a></h3></div>
+      <div class="col-sm-6 text-right">
+       <ul class="nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">John_Smith <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </li>
+       </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="dashboard">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="media">
+          <div class="media-left">
+            <a href="#">
+              <img class="media-object img-responsive" src="assets/placeholder.jpg" alt="...">
+            </a>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">John_Smith</h4>
+            <p>@John_Smith123</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 text-right help-block">
+        <a href="#">
+          Need help <i class="fa fa-question-circle" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <hr class="flush-bottom">
+  <div class="container">
+    <div class="row flexbox">
+      <div class="col-sm-4 border-right">
+        <h4><i class="fa fa-tasks" aria-hidden="true"></i> Spaces  <p>spaces is the list of projects</p></h4>
+        <a href="#" class="create" data-toggle="modal" data-target="#myModal">Create space</a>
+        <ul class="list">
+          <li *ngFor="let project of projects">
+            <a routerLink="/spacetickets"><i class="fa fa-ellipsis-v" aria-hidden="true"></i><i class="fa fa-ellipsis-v push-icon" aria-hidden="true"></i>{{project}}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-4 border-right">
+        <h4><i class="fa fa-user-plus" aria-hidden="true"></i> Members</h4>
+        <a class="create" routerLink="/addmember">Add members</a>
+      </div>
+      <div class="col-sm-4">
+        <h4><i class="fa fa-area-chart" aria-hidden="true"></i> Recent Activities</h4>
+        <time>20-10-2017</time>
+         <ul class="recent">
+          <li>
+            <a href="#">17:02 <i class="fa fa-wrench" aria-hidden="true"></i> <span>John_Smith</span> created <span>@ChatBot</span></a>
+          </li>
+          <li>
+           <a href="#">16:00 <i class="fa fa-wrench" aria-hidden="true"></i> <span>John_Smith</span> created <span>@Job Portal</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--space modal-->
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Create new space</h4>
+      </div>
+      <div class="modal-body">
+        <form #createSpaceForm = "ngForm">
+          <div class="form-group flush-bottom">
+            <input name="space"  [(ngModel)]="user.space"  #name = "ngModel"  required type="text" class="form-control" placeholder="Type space name" #createSpace createSpace.value=''>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn" (click)="addSpace(createSpace.value )" [disabled]="!createSpaceForm.form.valid" data-dismiss="modal">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

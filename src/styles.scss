@@ -1,0 +1,225 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    color: #4c4a4a;
+    font-family: "Nunito";
+    background-color: #f5f3f3;
+}
+
+.navbar {
+    min-height: initial;
+    background-color: transparentize($color: #52c6c1, $amount: .4);
+    border: none;
+    border-radius: 0;
+     li {
+        a {
+            &:hover {
+                background-color: transparent !important;
+            }
+        }
+    }
+    .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+         background-color: transparent !important;
+    }
+    .navbar-header {
+        float: none;
+        text-align: center;
+        .nav {
+            display: inline-block;
+            .dropdown  {
+                .dropdown-menu {
+                    a {
+                        color: #4c4a4a;
+                        padding: 6px 0;
+                        /* display: inline-block; */
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar-brand {
+        width: 90px;
+        display: inline-block;
+        height: 90px;
+        float: none;
+        padding-bottom: 0;
+    }
+
+    h3 {
+        font-family: 'lobster';
+         color: #fff;
+        a {
+            color: #fff;
+            font-family: 'lobster';
+        }
+        
+
+        // margin-top: 0;
+    }
+    .brand-img {
+        img {
+            width: 40px;
+            padding-top: 10px;
+            margin: auto;
+            margin-right: 0;
+        }
+    }
+    .dropdown {
+        a {
+            font-size: 18px;
+            color: #fff;
+            font-weight: 700;
+            padding-top: 20px;
+        }
+    }
+}
+
+form {
+    input {
+        &.form-control {
+            height: inherit;
+            background-color: transparentize($color: #52c6c1, $amount: .9);
+            padding: 18px 12px;
+            border: none;
+            box-shadow: none;
+            border-radius: 0;
+        }
+    }
+    .form-group {
+        margin-bottom: 30px;
+    }
+    .alert-danger {
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        margin-top: 10px;
+    }
+}
+
+.submit {
+    background-color: #52c6c1;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0;
+    padding: 16px 27px;
+    font-size: 18px;
+    font-weight: 700;
+    @media (max-width: 767px) {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+.redirect {
+    p {
+        font-size: 18px;
+        // font-weight: 600;
+        a {
+            color: #4c4a4a;
+             font-weight: 600;
+        }
+    }
+}
+
+body button[disabled] {
+    background-color: transparentize($color: #52c6c1, $amount: .4);
+    cursor: not-allowed;
+    &:hover {
+         background-color: transparentize($color: #52c6c1, $amount: .4);
+         color: #fff;
+    }
+}
+
+.create {
+    background-color: #52c6c1;
+    color: #fff;
+    padding: 7px 10px;
+    font-size: 15px;
+    font-weight: 600;
+    float: right;
+}
+
+//modal
+.modal {
+    .modal-content {
+        border-radius: 0;
+        border: none;
+        background-color: #f9f9f9;
+    }
+    button {
+        &.btn {
+            border: none;
+            border-radius: 0;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 10px 15px;
+            color: #fff;
+            background-color: transparentize($color: #52c6c1, $amount: 0);
+            &:hover {
+                color: #fff;
+            }    
+        }
+    }
+}
+
+//helper class added
+.flush-bottom {
+    margin-bottom: 0 !important;
+}
+.flush-top {
+    margin-top: 0 !important;
+}
+.hard {
+    padding: 0;
+}
+
+.breadcrumb {
+    padding: 20px 15px;
+    li {
+        font-size: 16px;
+        a {
+            color: #4c4a4a;
+            // text-decoration: underline;
+            i {
+                font-size: 20px;
+            }
+        }
+        +li {
+            &:before {
+                content: "\f101";
+                font: normal normal normal 20px/1 FontAwesome;
+            }
+        }
+    }
+}
+
+// upload images 
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  float: right;
+   @media (max-width: 767px) {
+        float: none;
+        margin-top: 10px;
+    }
+}
+
+.upload-btn-wrapper .btn {
+  border: 1px solid #52c6c1;
+  color: #52c6c1;
+  background-color: transparent;
+  padding: 8px 8px;
+  font-size: 14px;
+  font-weight: 200;
+  border-radius: 0;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}

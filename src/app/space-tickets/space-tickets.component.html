@@ -1,0 +1,62 @@
+<nav class="navbar navbar-default flush-bottom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <div class="brand-img col-sm-1"><img alt="Brand" src="assets/bug-fixing.png" class="img-responsive"></div>
+      <div class="col-sm-4 text-left"><h3><a routerLink="/dashboard">Bug Tracker</a></h3></div>
+      <div class="col-sm-6 text-right">
+       <ul class="nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">John_Smith <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </li>
+       </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="tickets-details">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 hard">
+        <ol class="breadcrumb">
+          <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+          <li class="active">ChatBots</li>
+          <li class="active">Tickets</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h3>Current Tickets</h3>
+      </div>
+      <div class="col-sm-12">
+        <table class="table flush-bottom"> 
+          <thead> 
+            <tr> 
+              <th># SNo.</th> 
+              <th width="700px;">Ticket Summary</th> 
+              <th>Assigned To</th> 
+              <th>Ticket Status</th>
+            </tr> 
+          </thead> 
+          <tbody #projectlist>
+            <tr *ngFor ="let project of projects; let i = index"> 
+              <th scope="row">#{{i+1}}</th> 
+              <td><a routerLink="/spacedetails">{{project.projectSummary}}</a></td> 
+              <td>{{project.assign}}</td> 
+              <td>{{project.status}}</td> 
+            </tr>
+          </tbody> 
+        </table>
+      </div>
+      <div class="col-sm-12">
+        <a class="create-ticket" (click)= "appendTicket()"><i class="fa fa-plus" aria-hidden="true"></i> Create new ticket</a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,96 @@
+.dashboard {
+    padding-top: 50px;
+    .media-left {
+        a {
+            display: inline-block;
+            width: 70px;
+        }
+    }
+    .media-body {
+        padding-left: 15px;
+        h4 {
+            font-size: 26px;
+            font-weight: 600;
+        }
+        p {
+            color: #ccc;
+        }
+    }
+    .help-block {
+        a {
+            font-size: 16px;
+            padding-top: 15px;
+            display: inline-block;
+            color: #ccc;
+        }
+    }
+    h4 {
+        font-weight: 600;
+        font-size: 22px;
+        padding-top: 20px;
+        p {
+            color: #ccc;
+            font-size: 14px;
+            font-weight: 100;
+            display: inline-block;
+            float: right;
+            margin-top: 7px;
+        }
+        i {
+            font-size: 28px;
+        }
+    }
+    ul {
+        float: left;
+        width: 100%;
+        padding-top: 10px;
+        padding-left: 0;
+        list-style-type: none;
+
+        li {
+            font-size: 16px;
+            margin-bottom: 10px;
+            a {
+                color: #4c4a4a;
+            }
+            
+        }
+    }
+    time {
+        font-size: 16px;
+        color: #ccc;
+        font-weight: 400;
+    }
+     .recent {
+         padding-top: 25px;
+         a {
+             color: #ccc !important;
+             span {
+                color: #4c4a4a;
+                font-weight: 600;
+            }
+            i {
+                margin: 0 5px;
+            }
+         } 
+    }
+    .list {
+        a {
+            i {
+                font-size: 22px;
+                color: #ccc;
+                &.push-icon {
+                    margin-right: 10px;
+                    margin-left: 2px;
+                }
+            }
+        }
+    }
+}
+
+.flexbox {
+    display: flex;
+}
+.border-right {
+    border-right: 1px solid #eee;
+}

@@ -1,0 +1,59 @@
+<nav class="navbar navbar-default flush-bottom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <div class="brand-img col-sm-1"><img alt="Brand" src="assets/bug-fixing.png" class="img-responsive"></div>
+      <div class="col-sm-4 text-left"><h3><a routerLink="/dashboard">Bug Tracker</a></h3></div>
+      <div class="col-sm-6 text-right">
+       <ul class="nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">John_Smith <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </li>
+       </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="member-add">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h3>Invite your team</h3>
+        <p>Send an invitation to the people you want to work on your projects.</p>
+      </div>
+      <form #userinvite="ngForm" class="col-sm-6 col-sm-offset-3">
+        <div class="form-group">
+          <input name="email" [(ngModel)]="user.email" type="text" class="form-control" placeholder="Enter email address" #email = "ngModel"  required minlength="8">
+           <div *ngIf="email.errors && (email.dirty || email.touched)" class="alert alert-danger">
+              <div [hidden]="!email.errors.required">
+                Email is required
+              </div>
+            </div>
+        </div>
+         <div class="form-group">
+          <input name="email1" [(ngModel)]="user.email1" type="text" class="form-control" placeholder="Enter email address">
+           
+        </div>
+         <div class="form-group">
+          <input name="email2" [(ngModel)]="user.email2" type="text" class="form-control" placeholder="Enter email address">
+           
+        </div>
+        <div class="form-group row">
+           <div class="col-sm-12 text-right">
+              <p class="content">You can invite 3 member at a time</p>
+            </div>
+          <div class="col-sm-6 text-left">
+            <button class="submit" [disabled]="!userinvite.form.valid">Submit</button>
+          </div>
+           <div class="col-sm-6 text-right">
+             <a  class="cancel" routerLink="/dashboard">Cancel</a>
+           </div>
+          
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

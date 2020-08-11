@@ -1,0 +1,27 @@
+.member-add {
+    padding-top: 30px;
+    h3 {
+        font-size: 28px;
+    }
+    p {
+        font-size: 18px;
+        &.content {
+            font-size: 14px;
+            color: #ccc;
+        }
+    }
+    form {
+        padding-top: 30px;
+    }
+}
+.cancel {
+    display: inline-block;
+    background-color: #eee;
+    color: #aaa;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0;
+    padding: 16px 27px;
+    font-size: 18px;
+    font-weight: 700;
+}

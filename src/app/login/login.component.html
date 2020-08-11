@@ -1,0 +1,57 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <!--<a class="navbar-brand" href="#">
+        <img alt="Brand" src="assets/bug-fixing.png" class="img-responsive">
+      </a>-->
+      <h3 class="text-center">Bug Tracker</h3>
+    </div>
+  </div>
+</nav>
+
+<section class="login-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <figure>
+         <img src="assets/bug-fixing-dark.png" class="img-responsive">
+        </figure>
+        <h1 class="text-center">Login to Bug Tracker</h1>
+      </div>
+      <form #login="ngForm" class="col-sm-6 col-sm-offset-3">
+        <div class="form-group">
+          <input name="email" [(ngModel)]="user.email" type="text" class="form-control" placeholder="Username" #username = "ngModel"  required minlength="8">
+        
+           <div *ngIf="username.errors && (username.dirty || username.touched)" class="alert alert-danger">
+              <div [hidden]="!username.errors.required">
+                Username is required
+              </div>
+              <div [hidden]="!username.errors.minlength">
+                Username must be at least 8 characters long.
+              </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input name="password" [(ngModel)]="user.password" type="password" class="form-control" placeholder="Password" #name = "ngModel"  required minlength="8">
+          <div *ngIf="name.errors && (name.dirty || name.touched)" class="alert alert-danger">
+              <div [hidden]="!name.errors.required">
+                Password is required
+              </div>
+              <div [hidden]="!name.errors.minlength">
+                Password must be at least 8 characters long.
+              </div>
+          </div>
+          <p class="text-right">Forget password?</p>
+        </div>
+        <div class="form-group text-center">
+          <button class="submit" (click)='save(login.value, login.valid)' [disabled]="!login.form.valid">Submit</button>
+        </div>
+      </form>
+      <div class="col-sm-12 text-center redirect">
+        <p>Dont have an account? <a routerLink = "/register">Create new one</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--<router-outlet></router-outlet>-->

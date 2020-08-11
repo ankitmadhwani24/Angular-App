@@ -1,0 +1,77 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <!--<a class="navbar-brand" href="#">
+        <img alt="Brand" src="assets/bug-fixing.png" class="img-responsive">
+      </a>-->
+      <h3 class="text-center">Bug Tracker</h3>
+    </div>
+  </div>
+</nav>
+
+<section class="login-section register">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="text-center">Register Here</h1>
+        <p class="text-center sub-content">Some of your basic details are required</p>
+      </div>
+      <form #login="ngForm" class="col-sm-6 col-sm-offset-3">
+        <div class="form-group">
+          <input name="email" [(ngModel)]="user.email" type="text" class="form-control" placeholder="Username" #email = "ngModel"  required minlength="8">
+           <div *ngIf="email.errors && (email.dirty || email.touched)" class="alert alert-danger">
+              <div [hidden]="!email.errors.required">
+                Email is required
+              </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input name="firstname" [(ngModel)]="user.fname" type="text" class="form-control" placeholder="First Name" #Firstname = "ngModel"  required>
+           <div *ngIf="Firstname.errors && (Firstname.dirty || Firstname.touched)" class="alert alert-danger">
+              <div [hidden]="!Firstname.errors.required">
+                Firstname is required
+              </div>
+              <!--<div [hidden]="!username.errors.minlength">
+                Username must be at least 8 characters long.
+              </div>-->
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <input name="username" [(ngModel)]="user.email" type="text" class="form-control" placeholder="Last Name">
+        </div>
+
+        <div class="form-group">
+          <input name="username" [(ngModel)]="user.email" type="text" class="form-control" placeholder="Username" #username = "ngModel"  required minlength="8">
+           <div *ngIf="username.errors && (username.dirty || username.touched)" class="alert alert-danger">
+              <div [hidden]="!username.errors.required">
+                Username is required
+              </div>
+              <div [hidden]="!username.errors.minlength">
+                Username must be at least 8 characters long.
+              </div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <input name="password" [(ngModel)]="user.password" type="password" class="form-control" placeholder="Password" #name = "ngModel"  required minlength="8">
+          <div *ngIf="name.errors && (name.dirty || name.touched)" class="alert alert-danger">
+              <div [hidden]="!name.errors.required">
+                Password is required
+              </div>
+              <div [hidden]="!name.errors.minlength">
+                Password must be at least 8 characters long.
+              </div>
+          </div>
+        </div>
+        <div class="form-group text-center">
+          <button class="submit" (click)='save(login.value, login.valid)' [disabled]="!login.form.valid">Sign Up</button>
+        </div>
+      </form>
+      <div class="col-sm-12 text-center redirect">
+        <p>Already have an account? <a routerLink = "/login">Login here</a></p>
+      </div>
+    </div>
+  </div>
+</section>

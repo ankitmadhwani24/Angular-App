@@ -1,0 +1,20 @@
+.tickets-details {
+    .create-ticket {
+        color: #ccc;
+        font-size: 16px;
+        padding-top: 8px;
+        display: inline-block;
+        padding-left: 20px;
+        cursor: pointer;
+        i {
+            margin-right: 8px;
+        }
+    }
+    
+    .add-btn {
+        padding: 7px 35px;
+        font-size: 16px;
+        font-weight: 700;
+        border-radius: 0;
+    }
+}
